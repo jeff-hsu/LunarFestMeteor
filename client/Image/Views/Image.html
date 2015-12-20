@@ -1,0 +1,48 @@
+<template name="Image">
+    {{#if currentUser}}
+        {{> imagesUpload}}
+    {{/if}}
+    {{>imageView}}
+</template>
+
+<template name="imagesUpload">
+    <input type="file" name="upload" class="imageInput"><br/>
+    <strong>OR</strong>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="dropzone" class="dropzone">
+                <div class="well well-drop-zone">
+                    Drop file(s) here to upload
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="imageView">
+    {{#each images}}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="image-info">
+                    {{#if ownImage}}
+                        <a class="delete-image">
+                            <i class="fa fa-trash fa-2x"></i>
+                        </a>
+                    {{/if}}
+                    Posted on: {{postDate}} /
+                    Posted by: {{username}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="{{this.url}}" target="_blank" class="thumbnail">
+                    <img src="{{this.url}}"/>
+                </a>
+            </div>
+        </div>
+    {{/each}}
+</template>
+

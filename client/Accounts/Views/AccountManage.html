@@ -1,0 +1,50 @@
+<template name="AccountManage">
+    {{#if currentUser}}
+        {{>logoutForm}}
+    {{else}}
+        {{>loginForm}}
+        {{>signupForm}}
+    {{/if}}
+
+
+</template>
+
+<template name="logoutForm">
+    <form id="logout-form">
+        {{currentUser.profile.name}}<button type="submit" class="btn btn-danger">Log Out</button>
+    </form>
+</template>
+
+<template name="loginForm">
+    <form id="login-form">
+        <h2>Log In</h2>
+        <label for="login-email">Email</label>
+        <input type="text" id="login-email" class="form-control" placeholder="Email" /> <br/>
+
+        <label for="login-password">Password</label>
+        <input type="text" id="login-password" class="form-control" placeholder="Password" /> <br/>
+
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+</template>
+
+<template name="signupForm">
+    <form id = "signup-form">
+        <h2>Sign Up</h2>
+
+        <label for="signup-email">Email</label>
+        <input type="text" id="signup-email" class="form-control" placeholder="Email" /> <br/>
+
+        <label for="signup-password">Password</label>
+        <input type="text" id="signup-password" class="form-control" placeholder="Password" /> <br/>
+
+        <label for="signup-name">Name</label>
+        <input type="text" id="signup-name" class="form-control" placeholder="Name" /> <br/>
+
+        <label for="signup-country">Country</label>
+        <input type="text" id="signup-country" class="form-control" placeholder="country" /> <br/>
+
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+    </form>
+
+</template>

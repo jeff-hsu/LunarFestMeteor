@@ -1,0 +1,33 @@
+<template name="profile">
+    {{>personInfo}}
+    {{>petInfo}}
+    {{>personalPhoto}}
+</template>
+
+<template name="personInfo">
+    <div class="container-fluid">
+        <h3>Personal Info</h3>
+        First Name: {{thisUser.profile.firstName}} <br/>
+        Last Name: {{thisUser.profile.lastName}}<br/>
+        Email:
+        {{#each thisUser.emails}}
+            {{address}}
+        {{/each}}<br/>
+        Gender: {{thisUser.profile.gender}} <br/>
+    </div>
+</template>
+
+<template name="petInfo">
+    <div class="container-fluid">
+        <h3>Pet Info</h3>
+        Pet Name: {{thisUser.profile.petName}} <br/>
+    </div>
+</template>
+
+<template name="personalPhoto">
+    <div class="container-fluid">
+        <h3>Personal Photos</h3>
+       {{>imageView}}
+    </div>
+</template>
+

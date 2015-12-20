@@ -1,0 +1,10 @@
+{
+  "public": {
+    "recordsPerPage": "5"
+  },
+  "private": {
+    "AWSAccessKeyId": "AKIAIK7RUBDC5QPGG2SA",
+    "AWSSecretAccessKey": "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",
+    "AWSBucket": "lunarfest-photo"
+  }
+}

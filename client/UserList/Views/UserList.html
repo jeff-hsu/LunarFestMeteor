@@ -1,0 +1,10 @@
+<template name="UserList">
+    <div class="container-fluid">
+        <div class="row">
+            {{#each users}}
+                Name: {{profile.firstName}} {{profile.lastName}}, Email: {{emails.[0].address}},
+                    Country: {{profile.country}}
+            {{/each}}
+        </div>
+    </div>
+</template>
