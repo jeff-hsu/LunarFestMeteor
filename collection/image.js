@@ -26,6 +26,15 @@ if (Meteor.isServer) {
         }
     });
 
+    PostImages = new FS.Collection("PostImages", {
+        stores: [imageStore],
+        filter: {
+            allow: {
+                contentTypes: ['image/*']
+            }
+        }
+    });
+
 }
 
 
@@ -57,6 +66,18 @@ if (Meteor.isClient) {
             }
         }
     });
+
+    PostImages = new FS.Collection("PostImages", {
+        stores: [imageStore],
+        filter: {
+            allow: {
+                contentTypes: ['image/*']
+            },
+            onInvalid: function (message) {
+                toastr.error(message);
+            }
+        }
+    });
 }
 Images.allow({
     'insert': function (userId) {
@@ -65,4 +86,14 @@ Images.allow({
     'update': function(userId) { return userId === image.userId; },
     'download': function(){return true;},
     remove: function(userId, image) { return userId === image.userId; }
+});
+
+//TODO
+PostImages.allow({
+    'insert': function () {
+        return true;
+    },
+    'update': function() { return true; },
+    'download': function(){return true;},
+    remove: function() { return true;}
 });

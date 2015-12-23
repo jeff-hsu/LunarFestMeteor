@@ -35,7 +35,7 @@ var incrementLimit = function(templateInstance) {
 }
 
 Template.imagesUpload.events({
-    'change .imageInput': function(event,) {
+    'change .imageInput': function(event) {
         FS.Utility.eachFile(event, function(file) {
             console.log(file);
             Images.insert(file, function (err, fileObj) {
@@ -47,7 +47,7 @@ Template.imagesUpload.events({
         var user = Meteor.user();
         FS.Utility.eachFile(e, function(file) {
             var newFile = new FS.File(file);
-            newFile.username = user.username;
+            newFile.useremail = user.emails[0].address;
             newFile.userId = user._id;
             Images.insert(newFile, function (error, fileObj) {
                 if (error) {
