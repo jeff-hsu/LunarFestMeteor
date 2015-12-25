@@ -61,6 +61,9 @@ if (Meteor.isClient) {
         }
     });
 
+
+
+
     //PostImages = new FS.Collection("PostImages", {
     //    stores: [imageStore],
     //    filter: {

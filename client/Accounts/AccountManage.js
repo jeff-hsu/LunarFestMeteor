@@ -4,7 +4,6 @@
 Template.signupForm.events({
     'submit #signup-form': function(event, template){
         event.preventDefault();
-        console.log(template.find('#signup-email'));
         Meteor.call('create_user',
             template.find('#signup-username').value,
             template.find('#signup-email').value,

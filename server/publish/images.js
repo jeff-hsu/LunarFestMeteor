@@ -8,8 +8,9 @@ Meteor.publish('images', function(limit, user_id) {
     if (user_id) {
         check(user_id, String);
         findQuery = { userId : user_id };
+    }else if (!Roles.userIsInRole( this.userId, 'admin' )){
+        findQuery = {status: "approved"};
     }
-    console.log(findQuery);
     return Images.find(findQuery, {
         limit: limit,
         sort: { uploadedAt: -1 }

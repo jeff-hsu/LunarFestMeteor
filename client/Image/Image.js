@@ -35,13 +35,23 @@ var incrementLimit = function(templateInstance) {
 }
 
 Template.imagesUpload.events({
-    'change .imageInput': function(event) {
-        FS.Utility.eachFile(event, function(file) {
-            console.log(file);
-            Images.insert(file, function (err, fileObj) {
-                // Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
-            });
+    'change .imageInput':function(event){
+       /* var files = event.currentTarget.files[0];
+        console.log(files);
+        var upload = orion.filesystem.upload({
+            fileList: files,
+            name: files.name,
+            uploader: "S3"
         });
+        Tracker.autorun(function () {
+            if (upload.ready()) {
+                console.log(upload.fileId)
+            }
+        });
+        Tracker.autorun(function () {
+            var progress = upload.progress();
+            console.log(progress);
+        });*/
     },
     'dropped #dropzone': function(e) {
         var user = Meteor.user();
@@ -49,6 +59,7 @@ Template.imagesUpload.events({
             var newFile = new FS.File(file);
             newFile.useremail = user.emails[0].address;
             newFile.userId = user._id;
+            newFile.status = "pending";
             Images.insert(newFile, function (error, fileObj) {
                 if (error) {
                     toastr.error("Upload failed... please try again.");
