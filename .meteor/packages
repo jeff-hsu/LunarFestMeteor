@@ -21,7 +21,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 
 kadira:flow-router
 kadira:blaze-layout
-ian:accounts-ui-bootstrap-3
 accounts-password
 meteortoys:allthings
 cfs:filesystem
@@ -36,3 +35,10 @@ momentjs:moment
 natestrauser:font-awesome
 reactive-var
 check
+
+orionjs:core
+fortawesome:fontawesome
+orionjs:bootstrap
+orionjs:image-attribute
+orionjs:s3
+orionjs:filesystem

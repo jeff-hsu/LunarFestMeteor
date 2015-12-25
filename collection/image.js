@@ -2,12 +2,6 @@
  * Created by Jeff on 2015-12-09.
  */
 if (Meteor.isServer) {
-    var createThumb = function (fileObj, readStream, writeStream) {
-        // Transform the image into a 10x10px thumbnail
-        // TODO: NOT WORKING RIGHT NOW
-        gm(readStream, fileObj.name()).resize('100', '100').stream().pipe(writeStream);
-    };
-
 
     var imageStore = new FS.Store.S3("images", {
         /* REQUIRED */
@@ -26,14 +20,14 @@ if (Meteor.isServer) {
         }
     });
 
-    PostImages = new FS.Collection("PostImages", {
-        stores: [imageStore],
-        filter: {
-            allow: {
-                contentTypes: ['image/*']
-            }
-        }
-    });
+    //PostImages = new FS.Collection("PostImages", {
+    //    stores: [imageStore],
+    //    filter: {
+    //        allow: {
+    //            contentTypes: ['image/*']
+    //        }
+    //    }
+    //});
 
 }
 
@@ -67,17 +61,17 @@ if (Meteor.isClient) {
         }
     });
 
-    PostImages = new FS.Collection("PostImages", {
-        stores: [imageStore],
-        filter: {
-            allow: {
-                contentTypes: ['image/*']
-            },
-            onInvalid: function (message) {
-                toastr.error(message);
-            }
-        }
-    });
+    //PostImages = new FS.Collection("PostImages", {
+    //    stores: [imageStore],
+    //    filter: {
+    //        allow: {
+    //            contentTypes: ['image/*']
+    //        },
+    //        onInvalid: function (message) {
+    //            toastr.error(message);
+    //        }
+    //    }
+    //});
 }
 Images.allow({
     'insert': function (userId) {
@@ -88,12 +82,12 @@ Images.allow({
     remove: function(userId, image) { return userId === image.userId; }
 });
 
-//TODO
-PostImages.allow({
-    'insert': function () {
-        return true;
-    },
-    'update': function() { return true; },
-    'download': function(){return true;},
-    remove: function() { return true;}
-});
+
+//PostImages.allow({
+//    'insert': function () {
+//        return true;
+//    },
+//    'update': function() { return true; },
+//    'download': function(){return true;},
+//    remove: function() { return true;}
+//});

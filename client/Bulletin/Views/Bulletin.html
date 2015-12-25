@@ -1,19 +1,6 @@
 <template name="listPosts">
     {{#each posts}}
         <h3>{{title}}</h3>
-        <p>{{body}}</p>
-        {{submitted}}
-        {{#each images}}
-            <img src="{{this.url}}"/>
-        {{/each}}
-        <div class="row">
-            <div class="col-md-12">
-                <div id="dropzone" class="dropzone">
-                    <div class="well well-drop-zone">
-                        Drop file(s) here to upload
-                    </div>
-                </div>
-            </div>
-        </div>
+        <a href="/post/{{_id}}">View Details</a>
     {{/each}}
 </template>

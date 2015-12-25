@@ -1,0 +1,7 @@
+<template name = "PostSingle">
+    <h1>{{post.title}}</h1>
+    {{#if post.image}}
+        <img src="{{post.image.url}}"/>
+    {{/if}}
+    <p>{{post.body}}</p>
+</template>

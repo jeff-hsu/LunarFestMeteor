@@ -3,7 +3,7 @@
         {{>logoutForm}}
     {{else}}
         {{>loginForm}}
-        <a href="register">Join Family</a>
+        <a href="/register">Join Family</a>
     {{/if}}
 
 
@@ -31,6 +31,9 @@
 <template name="signupForm">
     <form id = "signup-form">
         <h2>Sign Up</h2>
+
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" class="form-control" placeholder="Username" /> <br/>
 
         <label for="signup-email">Email</label>
         <input type="text" id="signup-email" class="form-control" placeholder="Email" /> <br/>

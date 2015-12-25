@@ -5,6 +5,11 @@ Meteor.publish("allPosts", function () {
     return Posts.find();
 });
 
-Meteor.publish("allPostImages", function () {
-    return PostImages.find();
-});
+Meteor.publish("singlePost",function(id){
+    check(id,String);
+    return Posts.find({_id: id});
+})
+
+//Meteor.publish("allPostImages", function () {
+//    return PostImages.find();
+//});
