@@ -1,29 +1,7 @@
 /**
  * Created by Jeff on 2015-12-22.
  */
-//Posts = new Meteor.Collection("posts");
-
-Posts = new orion.collection('posts', {
-    singularName: 'post', // The name of one of these items
-    pluralName: 'posts', // The name of more than one of these items
-    link: {
-        title: 'Posts'
-    },
-    tabular: {
-        columns: [
-            {
-                data: "title",
-                title: "Title"
-            },{
-                data: "body",
-                title: "Body"
-            },{
-                data: "submitted",
-                title: "Submitted"
-            },
-        ]
-    }
-});
+Posts = new Meteor.Collection("posts");
 
 Posts.attachSchema(new SimpleSchema({
     title: {
@@ -34,7 +12,7 @@ Posts.attachSchema(new SimpleSchema({
     body: {
         type: String,
         optional: false,
-        label: 'body',
+        label: 'Body',
     },
 
     submitted: {
@@ -46,10 +24,18 @@ Posts.attachSchema(new SimpleSchema({
             label: false
         },
     },
-    image: orion.attribute('image', {
+    fileIds: {
+        type: [String],
         optional: true,
-        label: 'Post Image'
-    }),
+        autoform: {
+            afFieldInput: {
+                type: "cfs-files",
+                collection: "PostImages"
+            }
+        }
+    },
+
+
 
 }));
 

@@ -1,0 +1,13 @@
+<template name ="CreatePost">
+    {{#autoForm collection="Posts" id="insertPostForm" type="insert"}}
+        <fieldset>
+            <legend>Add a Post</legend>
+            {{> afQuickField name='title'}}
+            {{> afQuickField name='body' rows=6}}
+            {{> afQuickField name="fileIds" type="cfs-files" collection="PostImages"}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Insert</button>
+        <button id="create-post-back" class="btn btn-primary">Back</button>
+    {{/autoForm}}
+
+</template>

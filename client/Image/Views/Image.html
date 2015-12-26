@@ -43,6 +43,15 @@
                 </a>
             </div>
         </div>
+        {{#if isInRole 'admin'}}
+            {{status}}<br/>
+            <select id="imageView-status">
+                <option value="pending" >Pending Approval</option>
+                <option value="approved" >Approved</option>
+                <option value="inappropriate">Inappropriate</option>
+            </select>
+            <button type="submit" id="imageView-status-submit">Submit</button>
+        {{/if}}
     {{/each}}
 </template>
 

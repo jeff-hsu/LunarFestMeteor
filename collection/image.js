@@ -20,14 +20,14 @@ if (Meteor.isServer) {
         }
     });
 
-    //PostImages = new FS.Collection("PostImages", {
-    //    stores: [imageStore],
-    //    filter: {
-    //        allow: {
-    //            contentTypes: ['image/*']
-    //        }
-    //    }
-    //});
+    PostImages = new FS.Collection("PostImages", {
+        stores: [imageStore],
+        filter: {
+            allow: {
+                contentTypes: ['image/*']
+            }
+        }
+    });
 
 }
 
@@ -64,33 +64,34 @@ if (Meteor.isClient) {
 
 
 
-    //PostImages = new FS.Collection("PostImages", {
-    //    stores: [imageStore],
-    //    filter: {
-    //        allow: {
-    //            contentTypes: ['image/*']
-    //        },
-    //        onInvalid: function (message) {
-    //            toastr.error(message);
-    //        }
-    //    }
-    //});
+    PostImages = new FS.Collection("PostImages", {
+        stores: [imageStore],
+        filter: {
+            allow: {
+                contentTypes: ['image/*']
+            },
+            onInvalid: function (message) {
+                toastr.error(message);
+            }
+        }
+    });
 }
 Images.allow({
     'insert': function (userId) {
         return userId != null;
     },
-    'update': function(userId) { return userId === image.userId; },
+    'update': function(userId) { return (userId === image.userId || Roles.userIsInRole( this.userId, 'admin' )); },
     'download': function(){return true;},
     remove: function(userId, image) { return userId === image.userId; }
 });
 
 
-//PostImages.allow({
-//    'insert': function () {
-//        return true;
-//    },
-//    'update': function() { return true; },
-//    'download': function(){return true;},
-//    remove: function() { return true;}
-//});
+PostImages.allow({
+    'insert': function () {
+        return Roles.userIsInRole( this.userId, 'admin' );
+    },
+    'update': function() { return Roles.userIsInRole( this.userId, 'admin' ); },
+    'download': function(){return true;},
+    'remove': function() { return Roles.userIsInRole( this.userId, 'admin' );}
+
+});

@@ -1,4 +1,7 @@
 <template name="listPosts">
+    {{#if isInRole 'admin'}}
+        <a href="/newpost">Add New</a>
+    {{/if}}
     {{#each posts}}
         <h3>{{title}}</h3>
         <a href="/post/{{_id}}">View Details</a>

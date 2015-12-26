@@ -4,14 +4,18 @@
 Template.signupForm.events({
     'submit #signup-form': function(event, template){
         event.preventDefault();
-        Meteor.call('create_user',
-            template.find('#signup-username').value,
-            template.find('#signup-email').value,
-            template.find('#signup-password').value,
-            template.find('#signup-name').value,
-            template.find('#signup-country').value
-        )
-        Meteor.loginWithPassword(template.find('#signup-email').value,template.find('#signup-password').value);
+        Accounts.createUser({
+            username: template.find('#signup-username').value,
+            email: template.find('#signup-email').value,
+            password: template.find('#signup-password').value,
+            profile: {
+                name: template.find('#signup-name').value,
+                country: template.find('#signup-country').value
+            }
+        });
+
+
+
 
     }
 });

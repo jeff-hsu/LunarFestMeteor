@@ -1,5 +1,7 @@
 if (Meteor.isClient) {
-
+  Template.registerHelper('_', function(){
+    return _;
+  });
 }
 
 if (Meteor.isServer) {
@@ -15,7 +17,8 @@ if (Meteor.isServer) {
         }
       });
       var user = Meteor.users.findOne({username: "admin"});
-      Roles.addUserToRoles( user._id ,  ["admin"] );
+      Roles.addUsersToRoles( user._id ,  ["admin"] );
     }
+
   });
 }

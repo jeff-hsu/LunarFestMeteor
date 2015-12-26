@@ -10,6 +10,6 @@ Meteor.publish("singlePost",function(id){
     return Posts.find({_id: id});
 })
 
-//Meteor.publish("allPostImages", function () {
-//    return PostImages.find();
-//});
+Meteor.publish("allPostImages", function () {
+    return PostImages.find();
+});

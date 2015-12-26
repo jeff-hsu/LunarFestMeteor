@@ -83,8 +83,8 @@ Template.imageView.helpers({
 });
 
 Template.imageView.events({
-    'click .delete-image': function(e) {
-        e.preventDefault();
+    'click .delete-image': function(event) {
+        event.preventDefault();
 
         var sure = confirm('Are you sure you want to delete this image?');
         if (sure === true) {
@@ -96,5 +96,13 @@ Template.imageView.events({
                 }
             })
         }
+    },
+    'click #imageView-status-submit':function(event, template){
+        event.preventDefault();
+
+        console.log(template.find('#imageView-status').value);
+        Images.update({_id:this._id},{$set: {status:template.find('#imageView-status').value}})
     }
 });
+
+
