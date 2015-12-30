@@ -4,7 +4,28 @@
 Meteor.subscribe('allUsers');
 
 Template.UserList.helpers({
-    "users": function(){
-        return Meteor.users.find({},{sort: {"profile.country":1}});
+    "getUsersList": function(){
+        return Meteor.users.find();
+    },
+    "settings": function(){
+        return {
+          collection:  Meteor.users.find(),
+            showFilter: true,
+            showColumnToggles: true,
+            fields:[
+                {key: 'profile.name', label: 'Name'},
+                {key: 'username', label: 'User Name'},
+                {key: 'emails.0.address', label: 'Email'},
+                {key: 'profile.country', label: 'Country'},
+                {key: 'roles', label: 'Role'},
+                {
+                    key: 'createdAt',
+                    label: 'Registered Date',
+                    fn: function (value) {
+                        return (new Date(value)).toDateString()
+                    }
+                }
+            ],
+        };
     }
 })

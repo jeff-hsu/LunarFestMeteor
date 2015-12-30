@@ -1,7 +1,12 @@
 <template name = "PostSingle">
     <h1>{{post.title}}</h1>
-    {{#if post.image}}
-        <img src="{{post.image.url}}"/>
+    {{#if post.fileIds}}
+        {{#each images}}
+        <img src="{{url}}"/>
+        {{/each}}
     {{/if}}
     <p>{{post.body}}</p>
+    {{#if isInRole 'admin'}}
+        <a href="/editpost/{{post._id}}">Edit Post</a>
+    {{/if}}
 </template>

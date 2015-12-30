@@ -3,7 +3,19 @@
         <a href="/newpost">Add New</a>
     {{/if}}
     {{#each posts}}
-        <h3>{{title}}</h3>
-        <a href="/post/{{_id}}">View Details</a>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="post">
+                    <h3>{{title}}</h3>
+                    {{#if isInRole 'admin'}}
+                        <a class="delete-post">
+                            <i class="fa fa-trash fa-2x"></i>
+                        </a>
+                    {{/if}}
+
+                    <a href="/post/{{_id}}">View Details</a>
+                </div>
+            </div>
+        </div>
     {{/each}}
 </template>

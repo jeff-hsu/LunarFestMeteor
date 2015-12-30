@@ -8,10 +8,22 @@ Template.CreatePost.events({
    }
 });
 
-AutoForm.hooks({
-    insertPostForm: {
+
+AutoForm.addHooks('insertPostForm', {
+
+        //after:{
+        //    insert:function(){
+        //        console.log("aaa");
+        //        FlowRouter.go('/bulletin');
+        //        console.log("bbb");
+        //    }
+
         onSuccess: function() {
-            FlowRouter.go('/bulletin');
+            try{
+                FlowRouter.go('/bulletin');
+            } catch(e){
+                console.log("yo");
+            }
         }
-    }
-});
+}
+);

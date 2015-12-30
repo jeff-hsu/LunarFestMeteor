@@ -25,8 +25,12 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/ToyKit/main.css" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/client/main.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/client/main.css" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/sort.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/lib/main.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/filter.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table_i18n.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_collection/0.5.5/web.browser/packages/cfs_collection.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/natestrauser_font-awesome/4.4.0/web.browser/packages/natestrauser_font-awesome.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/autoupdate/1.2.4/web.browser/autoupdate_client.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_upload-http/0.0.20/web.browser/packages/cfs_upload-http.js" />
@@ -79,6 +83,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_base-package/0.0.30/web.browser/packages/cfs_base-package.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/callback-hook/1.0.4/web.browser/hook.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_file/0.1.17/web.browser/packages/cfs_file.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/anti_i18n/0.4.3/web.browser/packages/anti_i18n.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/check/1.1.0/web.browser/match.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_result/2.1.0/web.browser/client/header.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_result/2.1.0/web.browser/client/main.css" />
@@ -189,6 +194,7 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/geojson-utils/1.0.4/web.browser/post.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afArrayField/afArrayField.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/doc_insert/docInsert.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table.css" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/row_header/header.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afFormGroup/afFormGroup.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/row_account/account.js" />
@@ -371,8 +377,12 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/ToyKit/main.css" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/client/main.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/client/main.css" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/sort.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_pub/3.0.2/web.browser/lib/main.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/filter.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table_i18n.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_collection/0.5.5/web.browser/packages/cfs_collection.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/natestrauser_font-awesome/4.4.0/web.browser/packages/natestrauser_font-awesome.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/autoupdate/1.2.4/web.browser/autoupdate_client.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_upload-http/0.0.20/web.browser/packages/cfs_upload-http.js" />
@@ -425,6 +435,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_base-package/0.0.30/web.browser/packages/cfs_base-package.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/callback-hook/1.0.4/web.browser/hook.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_file/0.1.17/web.browser/packages/cfs_file.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/anti_i18n/0.4.3/web.browser/packages/anti_i18n.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/check/1.1.0/web.browser/match.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_result/2.1.0/web.browser/client/header.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/meteortoys_result/2.1.0/web.browser/client/main.css" />
@@ -535,6 +546,7 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/geojson-utils/1.0.4/web.browser/post.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afArrayField/afArrayField.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/doc_insert/docInsert.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aslagle_reactive-table/0.8.21/web.browser/lib/reactive_table.css" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/row_header/header.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/afFormGroup/afFormGroup.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_mongol/1.6.2/web.browser/client/row_account/account.js" />
