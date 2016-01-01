@@ -1,27 +1,40 @@
 <template name ="UpdatePost">
-    {{#autoForm collection="Posts" id="updatePostForm"  doc=getPostDocument type="method-update" meteormethod="updatePost"}}
+    {{#autoForm collection="Posts" id="updatePostForm" doc=getPostDocument type="update"}}
+        <fieldset>
+            <legend>Update a Post</legend>
+            {{> afQuickField name='title'}}
+            {{> afQuickField name='body' rows=6}}
+           {{> afQuickField name ="fileIds"}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Update</button>
+        <button id="update-post-back" class="btn btn-primary">Back</button>
+        {{/autoForm}}
+
+</template>
+
+<template name ="updatepost-obsolete">
+    {{#autoForm collection="Posts" id="updatePostForm_obsolete"  doc=getPostDocument type="method-update" meteormethod="updatePost"}}
         <fieldset>
             <legend>Update a Post</legend>
             {{> afQuickField name='title'}}
             {{> afQuickField name='body' rows=6}}
         </fieldset>
         <div>
-        {{#if getPostDocument.fileIds}}
-            {{#each images}}
-                <a class="delete-image">
-                    <i class="fa fa-trash fa-2x"></i>
-                </a>
-                 <img src="{{url}}"/><br>
-            {{/each}}
-        {{else}}
-            theres no photo
-        {{/if}}
+            {{#if getPostDocument.fileIds}}
+                {{#each images}}
+                    <a class="delete-image">
+                        <i class="fa fa-trash fa-2x"></i>
+                    </a>
+                    <img src="{{url}}"/><br>
+                {{/each}}
+            {{else}}
+                theres no photo
+            {{/if}}
         </div>
         <label>Add Image</label>
         <input type="file" id="update-post-add-image"><br/>
         <button type="submit" class="btn btn-primary">Update</button>
         <button id="update-post-back" class="btn btn-primary">Back</button>
     {{/autoForm}}
-
 </template>
 

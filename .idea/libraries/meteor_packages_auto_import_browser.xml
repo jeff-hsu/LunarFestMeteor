@@ -4,6 +4,7 @@
       <sourceFilesUrls>
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/dburles_mongo-collection-instances/0.3.4/web.browser/packages/dburles_mongo-collection-instances.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/gwendall_body-events/0.1.6/web.browser/packages/gwendall_body-events.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_ui/0.1.3/web.browser/packages/cfs_ui.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/lai_collection-extensions/0.1.4/web.browser/packages/lai_collection-extensions.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
@@ -318,14 +319,18 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/underscore.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/summernote_standalone/0.6.16/web.browser/packages/summernote_standalone/dist/summernote.css" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/pre.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/post.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/summernote_standalone/0.6.16/web.browser/packages/summernote_standalone.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/url_common.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/url_client.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_autoform-summernote/0.4.2/web.browser/packages/mpowaga_autoform-summernote.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/webapp/1.2.3/web.browser/webapp_client.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/triggers.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/route.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_autoform/2.2.1/web.browser/packages/cfs_autoform/cfs-autoform.css" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_jquery-ui-widget/1.11.4/web.browser/packages/mpowaga_jquery-ui-widget.js" />
+        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_jquery-fileupload/9.11.2/web.browser/packages/mpowaga_jquery-fileupload.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/_init.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/group.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/router.js" />
@@ -349,13 +354,13 @@
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/create/main.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/editor/main.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/session/main.js" />
-        <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_autoform/2.2.1/web.browser/packages/cfs_autoform.js" />
         <item url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_data-man/0.0.6/web.browser/packages/cfs_data-man.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/dburles_mongo-collection-instances/0.3.4/web.browser/packages/dburles_mongo-collection-instances.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/gwendall_body-events/0.1.6/web.browser/packages/gwendall_body-events.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_ui/0.1.3/web.browser/packages/cfs_ui.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/lai_collection-extensions/0.1.4/web.browser/packages/lai_collection-extensions.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox-inline/select-checkbox-inline.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
@@ -670,14 +675,18 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.0.9/web.browser/deprecated.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/tracker/1.0.9/web.browser/tracker.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/underscore.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/summernote_standalone/0.6.16/web.browser/packages/summernote_standalone/dist/summernote.css" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/pre.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/underscore/1.0.4/web.browser/post.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/summernote_standalone/0.6.16/web.browser/packages/summernote_standalone.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/url_common.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/url/1.0.5/web.browser/url_client.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_autoform-summernote/0.4.2/web.browser/packages/mpowaga_autoform-summernote.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/webapp/1.2.3/web.browser/webapp_client.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/triggers.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/route.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_autoform/2.2.1/web.browser/packages/cfs_autoform/cfs-autoform.css" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_jquery-ui-widget/1.11.4/web.browser/packages/mpowaga_jquery-ui-widget.js" />
+      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/mpowaga_jquery-fileupload/9.11.2/web.browser/packages/mpowaga_jquery-fileupload.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/_init.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/group.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/kadira_flow-router/2.10.0/web.browser/client/router.js" />
@@ -701,7 +710,6 @@
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/create/main.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/editor/main.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/msavin_jetsetter/1.5.2/web.browser/client/dirtySession/session/main.js" />
-      <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_autoform/2.2.1/web.browser/packages/cfs_autoform.js" />
       <root url="file://$USER_HOME$/AppData/Local/.meteor/packages/cfs_data-man/0.0.6/web.browser/packages/cfs_data-man.js" />
     </CLASSES>
     <SOURCES />

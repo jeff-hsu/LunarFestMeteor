@@ -23,3 +23,5 @@ Template.PostSingle.helpers({
     }
 
 })
+
+

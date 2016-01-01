@@ -11,7 +11,7 @@
         Last Name: {{thisUser.profile.lastName}}<br/>
         Email:
         {{#each thisUser.emails}}
-            {{address}}
+            {{address}} {{#if notVerified}}<button id="verify-email">Resend Email Verification Link</button>{{/if}}
         {{/each}}<br/>
         Gender: {{thisUser.profile.gender}} <br/>
     </div>

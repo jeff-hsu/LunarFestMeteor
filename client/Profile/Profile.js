@@ -42,3 +42,15 @@ var incrementLimit = function(templateInstance) {
     templateInstance.limit.set(newLimit);
 }
 
+Template.personInfo.events({
+    "click #verify-email": function(){
+        Meteor.call("SendVerificationEmail",Meteor.userId());
+        toastr.info("Verification Email Sent, please check your inbox");
+    }
+})
+Template.personInfo.helpers({
+    "notVerified": function(){
+        return !(this.verified);
+    }
+})
+

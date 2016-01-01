@@ -1,7 +1,7 @@
 /**
  * Created by Jeff on 2015-12-09.
  */
-Template.Image.created = function() {
+Template.Gallery.created = function() {
     var self = this;
 
     self.limit = new ReactiveVar;
@@ -12,7 +12,7 @@ Template.Image.created = function() {
     });
 }
 
-Template.Image.rendered = function() {
+Template.Gallery.rendered = function() {
     var self = this;
     // is triggered every time we scroll
     $(window).scroll(function() {
@@ -22,11 +22,11 @@ Template.Image.rendered = function() {
     });
 }
 
-Template.Image.helpers({
-    'images': function() {
-        return Images.find({},{sort:{uploadedAt:-1}});
-    }
-});
+//Template.Gallery.helpers({
+//    'images': function() {
+//        return Images.find({},{sort:{uploadedAt:-1}});
+//    }
+//});
 
 var incrementLimit = function(templateInstance) {
     var newLimit = templateInstance.limit.get() +
@@ -34,42 +34,7 @@ var incrementLimit = function(templateInstance) {
     templateInstance.limit.set(newLimit);
 }
 
-Template.imagesUpload.events({
-    'change .imageInput':function(event){
-       /* var files = event.currentTarget.files[0];
-        console.log(files);
-        var upload = orion.filesystem.upload({
-            fileList: files,
-            name: files.name,
-            uploader: "S3"
-        });
-        Tracker.autorun(function () {
-            if (upload.ready()) {
-                console.log(upload.fileId)
-            }
-        });
-        Tracker.autorun(function () {
-            var progress = upload.progress();
-            console.log(progress);
-        });*/
-    },
-    'dropped #dropzone': function(e) {
-        var user = Meteor.user();
-        FS.Utility.eachFile(e, function(file) {
-            var newFile = new FS.File(file);
-            newFile.useremail = user.emails[0].address;
-            newFile.userId = user._id;
-            newFile.status = "pending";
-            Images.insert(newFile, function (error, fileObj) {
-                if (error) {
-                    toastr.error("Upload failed... please try again.");
-                } else {
-                    toastr.success('Upload succeeded!');
-                }
-            });
-        });
-    }
-});
+
 Template.imageView.helpers({
     images: function () {
         return Images.find({},{sort:{uploadedAt:-1}});

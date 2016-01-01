@@ -4,25 +4,24 @@
 Template.CreatePost.events({
    'click #create-post-back': function(event){
        event.preventDefault();
+       Meteor.call("PostImagesCleanOrphans");
        FlowRouter.go('/bulletin');
    }
 });
 
 
 AutoForm.addHooks('insertPostForm', {
-
-        //after:{
-        //    insert:function(){
-        //        console.log("aaa");
-        //        FlowRouter.go('/bulletin');
-        //        console.log("bbb");
-        //    }
-
+        after: {
+            insert: function (err, docID) {
+                Meteor.call("PostImagesInsertPostId",docID);
+                Meteor.call("PostImagesCleanOrphans");
+            }
+        },
         onSuccess: function() {
             try{
                 FlowRouter.go('/bulletin');
             } catch(e){
-                console.log("yo");
+
             }
         }
 }

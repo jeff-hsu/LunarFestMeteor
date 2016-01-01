@@ -13,6 +13,36 @@ Posts.attachSchema(new SimpleSchema({
         type: String,
         optional: false,
         label: 'Body',
+        autoform: {
+            afFieldInput: {
+                type: 'summernote',
+                class: 'editor', // optional
+                settings: {
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']]
+                    ],
+                    height: 300,
+                    disableDragAndDrop: true
+                }
+            }
+        },
+        autoValue: function(){
+            if (Meteor.isServer && this.isSet){
+                return sanitizeHtml( this.value,{
+                    allowedTags: sanitizeHtml.defaults.allowedTags.concat([ 'span' ]),
+                    allowedAttributes: {
+                        '*': [ 'style' ]
+                    }
+                } );
+            }else{
+                return this.value;
+            }
+        }
     },
 
     submitted: {
@@ -27,13 +57,22 @@ Posts.attachSchema(new SimpleSchema({
     fileIds: {
         type: [String],
         optional: true,
-        autoform: {
-            afFieldInput: {
-                type: "cfs-files",
+        //autoform: {
+        //    afFieldInput: {
+        //        type: "cfs-files",
+        //        collection: "PostImages"
+        //    }
+        //}
+    },
+    "fileIds.$":{
+        autoform:{
+            afFieldInput:{
+                type: "fileUpload",
                 collection: "PostImages"
             }
         }
-    },
+
+    }
 
 
 

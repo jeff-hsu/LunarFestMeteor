@@ -5,6 +5,10 @@
   "private": {
     "AWSAccessKeyId": "AKIAIK7RUBDC5QPGG2SA",
     "AWSSecretAccessKey": "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",
-    "AWSBucket": "lunarfest-photo"
+    "AWSBucket": "lunarfest-photo",
+    "MailgunUsername":"postmaster@sandbox1ed633537861436db520d43c3d0543f6.mailgun.org",
+    "MailgunPassword":"35e1408065b1cd95b8d49db6fcb43763",
+    "MailgunServer":"smtp.mailgun.org",
+    "MailgunPort":"587"
   }
 }

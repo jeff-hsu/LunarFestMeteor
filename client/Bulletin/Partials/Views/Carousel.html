@@ -1,0 +1,33 @@
+<template name = "Carousel">
+    <div id="post-carousel" class="carousel slide" data-ride="carousel">
+        <!--Carousel indicators -->
+        <ol class="carousel-indicators">
+            {{#each images}}
+                {{> CarouselIndicator index=@index}}
+            {{/each}}
+        </ol>
+        <!--Wrapper for carousel items -->
+        <div class="carousel-inner">
+            {{#each images}}
+                {{> CarouselItem url=url index=@index}}
+            {{/each}}
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#post-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#post-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</template>
+
+<template name="CarouselItem">
+    <div class="item {{isActive}}">
+        <img src="{{url}}"/>
+    </div>
+</template>
+
+<template name="CarouselIndicator">
+    <li data-target="#post-carousel" data-slide-to="{{index}}" class="{{isActive}}"></li>
+</template>

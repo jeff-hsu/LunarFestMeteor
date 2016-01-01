@@ -3,8 +3,8 @@
         <fieldset>
             <legend>Add a Post</legend>
             {{> afQuickField name='title'}}
-            {{> afQuickField name='body' rows=6}}
-            {{> afQuickField name="fileIds" type="cfs-files" collection="PostImages"}}
+            {{> afQuickField name='body' rows=6 }}
+            {{> afQuickField name="fileIds"}}
         </fieldset>
         <button type="submit" class="btn btn-primary">Insert</button>
         <button id="create-post-back" class="btn btn-primary">Back</button>

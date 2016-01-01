@@ -29,7 +29,6 @@ cfs:standard-packages
 cfs:graphicsmagick
 raix:ui-dropped-event
 cfs:s3
-cfs:autoform
 chrismbeckett:toastr
 twbs:bootstrap
 momentjs:moment
@@ -43,3 +42,6 @@ aldeed:autoform
 alanning:roles
 underscore
 aslagle:reactive-table
+yogiben:autoform-file
+mpowaga:autoform-summernote
+djedi:sanitize-html

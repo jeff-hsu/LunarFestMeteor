@@ -1,0 +1,26 @@
+<template name="upload">
+    {{#if currentUser}}
+        {{#if currentUser.emails.[0].verified}}
+            {{> imagesUpload}}
+        {{else}}
+            <p>Please verify you're email to activate your account</p>
+        {{/if}}
+    {{else}}
+        <p>Please log in to upload images!</p>
+    {{/if}}
+</template>
+
+<template name="imagesUpload">
+    <input type="file" name="upload" class="imageInput"><br/>
+    <strong>OR</strong>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="dropzone" class="dropzone">
+                <div class="well well-drop-zone">
+                    Drop file(s) here to upload
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
