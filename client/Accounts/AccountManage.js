@@ -13,11 +13,8 @@ Template.signupForm.events({
                 country: template.find('#signup-country').value
             }
         });
+    },
 
-
-
-
-    }
 });
 
 Template.logoutForm.events({
@@ -35,17 +32,18 @@ Template.logoutForm.events({
 Template.loginForm.events({
     'submit #login-form':function(event,template){
         event.preventDefault();
-
-
         var email = template.find('#login-email').value;
-
         var password = template.find("#login-password").value;
-
 
         Meteor.loginWithPassword(email,password,function(err){
             if(err){
                 alert("Wrong Credentials");
             }
         });
+    },
+    'click #forgot-password':function(){
+        event.preventDefault();
+
+        FlowRouter.go("/reset-password");
     }
 });

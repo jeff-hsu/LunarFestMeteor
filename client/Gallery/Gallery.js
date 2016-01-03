@@ -1,18 +1,21 @@
 /**
  * Created by Jeff on 2015-12-09.
  */
-Template.Gallery.created = function() {
+Template.Gallery.onCreated (function() {
     var self = this;
 
     self.limit = new ReactiveVar;
     self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
 
-    Tracker.autorun(function() {
-        Meteor.subscribe('images', self.limit.get());
-    });
-}
+    //console.log("gallery created");
 
-Template.Gallery.rendered = function() {
+    Tracker.autorun(function() {
+       // Meteor.subscribe('images', self.limit.get());
+        Meteor.subscribe('images');
+    });
+})
+
+Template.Gallery.onRendered ( function() {
     var self = this;
     // is triggered every time we scroll
     $(window).scroll(function() {
@@ -20,7 +23,7 @@ Template.Gallery.rendered = function() {
             incrementLimit(self);
         }
     });
-}
+});
 
 //Template.Gallery.helpers({
 //    'images': function() {
@@ -34,10 +37,29 @@ var incrementLimit = function(templateInstance) {
     templateInstance.limit.set(newLimit);
 }
 
+Template.imageView.onCreated( function(){
+    console.log("imageview created");
+    //Meteor._reload.reload();
+    //Tracker.flush();
+});
+
+Template.imageView.onDestroyed( function(){
+    console.log("imageview destroyed");
+    FlowRouter.reload()
+    //Tracker.flush();
+});
 
 Template.imageView.helpers({
     images: function () {
-        return Images.find({},{sort:{uploadedAt:-1}});
+        if(Template.instance().subscriptionsReady()){
+            if(Session.get("filterImageQuery")){
+                return Images.find(Session.get("filterImageQuery"),{sort:{uploadedAt:-1}});
+            }else{
+                return Images.find({},{sort:{uploadedAt:-1}});
+            }
+
+        }
+
     },
     postDate: function() {
         return moment(this.uploadedAt).format('MMMM Do YYYY, h:mm:ss a');

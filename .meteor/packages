@@ -45,3 +45,5 @@ aslagle:reactive-table
 yogiben:autoform-file
 mpowaga:autoform-summernote
 djedi:sanitize-html
+raix:handlebar-helpers
+peerlibrary:reactive-publish

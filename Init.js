@@ -36,6 +36,18 @@ if (Meteor.isServer) {
           return 'Hi,\n' +
               'Please open the link below to verify your account on lunarfest.com:\n' + url;
         }
+      },
+      resetPassword:{
+        from: function(){
+          return "LunarFest <signup@lunarfest.com>";
+        },
+        subject: function(user) {
+          return 'Reset Password for lunarfest.com';
+        },
+        text: function(user, url) {
+          return 'Hi,\n' +
+              'Please open the link below to reset your password on lunarfest.com:\n' + url;
+        }
       }
     };
 

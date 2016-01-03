@@ -2,6 +2,8 @@
  * Created by Jeff on 2016-01-01.
  */
 
+var doneCallback;
+
 Accounts.onEmailVerificationLink(function (token, done) {
     Accounts.verifyEmail(token, function (err) {
         if (err != null) {
@@ -32,4 +34,13 @@ Accounts.onEmailVerificationLink(function (token, done) {
     });
 
     done();
+});
+
+
+Accounts.onResetPasswordLink(function (token, done) {
+    Session.set('resetPasswordToken', token);
+    Session.set('gotResetPasswordLink', true);
+    doneCallback = done();
+    FlowRouter.go("/reset-password");
+
 });
