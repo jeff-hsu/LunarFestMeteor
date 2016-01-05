@@ -8,11 +8,10 @@ Template.profile.onCreated ( function() {
     self.limit = new ReactiveVar;
     self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
 
-    Session.set("filterImageQuery",{});
-    Session.set("currentFilterTab", "all");
 
-    Tracker.autorun(function() {
-        Meteor.subscribe('images', Meteor.userId());
+
+    this.autorun(() => {
+        this.subscribe('images', self.limit.get(), Meteor.userId());
     });
 });
 
@@ -24,13 +23,6 @@ Template.profile.onRendered ( function() {
             incrementLimit(self);
         }
     });
-});
-
-Template.profile.onDestroyed( function() {
-    //console.log("profile destroyed");
-
-    Session.set("filterImageQuery",undefined);
-    Session.set("currentFilterTab", undefined);
 });
 
 Template.personInfo.helpers({
@@ -67,29 +59,4 @@ Template.personInfo.helpers({
     }
 })
 
-Template.personalPhoto.events({
-    "click #imageTab-all":function(event){
-        event.preventDefault();
-        Session.set("currentFilterTab","all");
-        Session.set("filterImageQuery",{});
-    },
-    "click #imageTab-app":function(event){
-        event.preventDefault();
-        Session.set("currentFilterTab","app")
-        Session.set("filterImageQuery",{status: "approved"});
-    },
-    "click #imageTab-pen":function(event){
-        event.preventDefault();
-        Session.set("currentFilterTab","pen")
-        Session.set("filterImageQuery",{status: "pending"});
-    },
-    "click #imageTab-ina":function(event){
-        event.preventDefault();
-        Session.set("currentFilterTab","ina")
-        Session.set("filterImageQuery",{status: "inappropriate"});
-    },
-    "click #test":function(event){
-        event.preventDefault();
-        FlowRouter.reload();
-    },
-})
+

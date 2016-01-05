@@ -7,11 +7,8 @@ Template.Gallery.onCreated (function() {
     self.limit = new ReactiveVar;
     self.limit.set(parseInt(Meteor.settings.public.recordsPerPage));
 
-    //console.log("gallery created");
-
-    Tracker.autorun(function() {
-       // Meteor.subscribe('images', self.limit.get());
-        Meteor.subscribe('images');
+    this.autorun(() => {
+        this.subscribe('images', self.limit.get());
     });
 })
 
@@ -25,11 +22,6 @@ Template.Gallery.onRendered ( function() {
     });
 });
 
-//Template.Gallery.helpers({
-//    'images': function() {
-//        return Images.find({},{sort:{uploadedAt:-1}});
-//    }
-//});
 
 var incrementLimit = function(templateInstance) {
     var newLimit = templateInstance.limit.get() +
@@ -37,17 +29,6 @@ var incrementLimit = function(templateInstance) {
     templateInstance.limit.set(newLimit);
 }
 
-Template.imageView.onCreated( function(){
-    console.log("imageview created");
-    //Meteor._reload.reload();
-    //Tracker.flush();
-});
-
-Template.imageView.onDestroyed( function(){
-    console.log("imageview destroyed");
-    FlowRouter.reload()
-    //Tracker.flush();
-});
 
 Template.imageView.helpers({
     images: function () {
